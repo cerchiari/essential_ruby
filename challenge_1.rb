@@ -17,4 +17,9 @@
 # Your code to define the method goes here.
 # =========================================
 
+def pmt (rate, duration, loan)
+  value = loan*(rate*((1 + rate)**duration)) / (((1 + rate)**duration) - 1)
+  return value
+end
+
 puts "Your monthly payment will be #{pmt(0.01, 60, 30000)}."
